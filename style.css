@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+[container_main]{
+    height: 100vh;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+[todo_main]{
+    max-width: 520px;
+    padding: 40px 30px 20px;
+    margin: 100px auto 20px;
+    background: #ffffff;
+    border-radius: 20px;
+}
+
+[todo_main] > h2{
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #63E6BE;
+}
+
+[input_box]{
+    border-radius: 150px;
+    overflow: hidden;
+    border: 2px solid rgb(206, 206, 206);
+    position: relative;
+}
+[input_box] > input{
+    padding: 10px 120px 10px 20px;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    width: 100%;
+}
+[input_box] > button{
+    border: none;
+    outline: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 110px;
+    border-radius: 150px;
+    background: #63E6BE;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+[input_box] > button:hover{background: #54c2a1;}
+
+
+
+/* lists_container */
+[lists_container]{
+    padding: 40px 0px;
+}
+
+[lists_container] > li{
+    padding: 10px 80px 20px 40px;
+    width: 100%;
+    list-style: none;
+    position: relative;
+    cursor: pointer;
+    user-select: none !important;
+    word-wrap: break-word;
+}
+[lists_container] > li::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 6px;
+    background: url(./unchecked.png);
+    background-size: cover;
+    background-position: center;
+    height: 25px;
+    width: 25px;
+}
+
+[lists_container] .checked{
+    text-decoration: line-through;
+    font-style: italic;
+}
+[lists_container] .checked::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 6px;
+    background: url(./checked.png);
+    background-size: cover;
+    background-position: center;
+    height: 25px;
+    width: 25px;
+}
+
+[lists_container] .del_list{
+    position: absolute;
+    display: block;
+    right: 10px;
+    top: 5px;
+    height: 30px;
+    width: 30px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+    color: #27ae60;
+    font-style: normal; 
+}
+[lists_container] .del_list:hover{
+    background: #f1f1f1;
+}
+
+svg path{
+    color: #63E6BE;
+    fill: #63E6BE;
+}
